@@ -29,6 +29,12 @@ For vim with Cornelis, there are no official bindings, but there are some recomm
   * a record with the required fields for the current type, with holes for the field values
   * **!VERY USEFUL! - if you have a function name in the hole, if the return type matches the goal, the function will be introduced with holes for its arguments**
 
+## Video lectures playlists
+
+### [This semester's](https://www.youtube.com/watch?v=lsxovC6bloM&list=PLShxdZq0K256lRgLZTi6e6KouExs5ZEV4&pp=gAQBiAQB)
+
+### [Last time's](https://www.youtube.com/watch?v=s5IBp2IwSw4&list=PLShxdZq0K256pGsUNHtvDux3Qbzu2ZWXI&pp=gAQBiAQB)
+
 ## [Agda installation instructions](./agda_install_instructions.md)
 
 ## Editor integrations
