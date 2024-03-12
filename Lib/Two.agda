@@ -18,3 +18,15 @@ not tt = ff
 Is : Two -> Set
 Is ff = Zero
 Is tt = One
+
+_&&_ : Two -> Two -> Two
+ff && y = ff
+tt && y = y
+
+infixr 70 _&&_
+
+_||_ : Two -> Two -> Two
+tt || y = tt
+ff || y = y
+
+infixr 60 _||_
