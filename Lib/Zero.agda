@@ -10,3 +10,6 @@ data Zero : Set where
 -- произведе, стойност от какъвто си тип искаме
 zero-elim : {A : Set} -> Zero -> A
 zero-elim ()
+
+Not : Set -> Set
+Not A = A -> Zero
