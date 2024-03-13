@@ -28,9 +28,16 @@ data Nat : Set where
 -- mention fixity
 -- infixr 100 _+N_
 
--- Even and Odd as functions
--- Even and Odd as examples for an indexed data type
+-- Even as functions
+-- Even as examples for an indexed data type
 -- indexed vs function/calculated
+-- easier to to prove vs easier to use
+-- TODO: good example for easier to use
+
+-- double : Nat -> Nat
+-- and double-IsEven
+-- use double to show lemma ideas and evaluation + recursive proofs
+-- good motivation for == and +N-right-suc
 
 -- NatEq
 
