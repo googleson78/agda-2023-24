@@ -244,7 +244,7 @@ data LosesTo : Throw -> Throw -> Set where
 ==-trans :
   {A : Set} {x y z : A} ->
   x == y ->
-  y == x ->
+  y == z ->
   x == z
 ==-trans = {! !}
 
