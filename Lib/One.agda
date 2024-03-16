@@ -1,3 +1,5 @@
+{-# OPTIONS --no-unicode #-}
+
 module Lib.One where
 
 -- типът данни с една стойност в него

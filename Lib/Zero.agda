@@ -1,3 +1,5 @@
+{-# OPTIONS --no-unicode #-}
+
 module Lib.Zero where
 
 -- празният тип данни, не можем да създадем стойност от него
