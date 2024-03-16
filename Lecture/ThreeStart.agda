@@ -184,7 +184,7 @@ infix 90 _<_
 -- Let's assume we have a "next" relation in the following sense:
 --   x R y, iff "y" is the "next" value "after" x. An example of this is the LosesTo relation
 -- Given a "next" relation, define a generalised version of the "LosesTo" relation with the following intuition:
---   In the original RPS game, rock loses to paper, and paper loses to scissors, "hence" scissors should lose to paper.
+--   In the original RPS game, rock loses to paper, and paper loses to scissors, "hence" scissors should lose to rock.
 data GLosesTo {A : Set} (R : A -> A -> Set) : A -> A -> Set where
 
 -- TASK
