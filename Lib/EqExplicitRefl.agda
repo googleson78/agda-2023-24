@@ -2,6 +2,8 @@
 
 module Lib.EqExplicitRefl where
 
+open import Lib.Zero
+
 data _==_ {A : Set} : A -> A -> Set where
   refl : (x : A) -> x == x
 
@@ -34,3 +36,8 @@ infixr 20 _$=_
   y == z ->
   x == z
 ==-trans (refl _) x = x
+
+_/=_ : {A : Set} -> A -> A -> Set
+x /= y = Not (x == y)
+
+infix 10 _/=_
