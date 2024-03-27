@@ -110,43 +110,60 @@ module _ where
     m +N suc n
     QED
 
-{-
--- TASK
--- Implement a linear and constant space tail recursive version of Nat addition
-addNat : Nat -> Nat -> Nat
-addNat = ?
+  -- TASK
+  -- Implement a linear and constant space tail recursive version of Nat addition
+  addNat : Nat -> Nat -> Nat
+  addNat zero m = m
+  addNat (suc n) m = addNat n (suc m)
 
--- TASK
--- Prove that your addNat behaves like +N.
--- Think about what lemma you'll need to formulate for the recursive case.
-addNat-==-+N : (n m : Nat) -> addNat n m == n +N m
-addNat-==-+N = ?
+  -- TASK
+  -- Prove that your addNat behaves like +N.
+  -- Think about what lemma you'll need to formulate for the recursive case.
+  addNat-==-+N : (n m : Nat) -> addNat n m == n +N m
+  addNat-==-+N zero m = m QED
+  addNat-==-+N (suc n) m =
+    addNat (suc n) m
+    =[]
+    addNat n (suc m)
+    =[ addNat-==-+N n (suc m) ]
+    n +N suc m
+    =[ ==-symm (+N-right-suc n m) ]
+    suc (n +N m)
+    QED
 
--- Traditionally defined recursive lists, parametrised by the type of elements in them.
-data List (a : Set) : Set where
-  -- the empty list is a list
-  [] : List a
-  -- we can add a new element to the "head" of a list
-  _,-_ : a -> List a -> List a
 
-infixr 21 _,-_
+  -- Traditionally defined recursive lists, parametrised by the type of elements in them.
+  data List (a : Set) : Set where
+    -- the empty list is a list
+    [] : List a
+    -- we can add a new element to the "head" of a list
+    _,-_ : a -> List a -> List a
 
--- concatenate two lists
-_+L_ : {A : Set} -> List A -> List A -> List A
-[] +L ys = ys
-(x ,- xs) +L ys = x ,- (xs +L ys)
+  infixr 21 _,-_
 
-infixr 22 _+L_
+  -- concatenate two lists
+  _+L_ : {A : Set} -> List A -> List A -> List A
+  [] +L ys = ys
+  (x ,- xs) +L ys = x ,- (xs +L ys)
 
--- TASK
--- Prove that +L is associative
-+L-assoc : {A : Set} (xs ys zs : List A) -> (xs +L ys) +L zs == xs +L (ys +L zs)
-+L-assoc = ?
+  infixr 22 _+L_
+
+  -- TASK
+  -- Prove that +L is associative
+  +L-assoc : {A : Set} (xs ys zs : List A) -> (xs +L ys) +L zs == xs +L (ys +L zs)
+  +L-assoc [] ys zs = ys +L zs QED
+  +L-assoc (x ,- xs) ys zs =
+    x ,- (xs +L ys) +L zs
+    =[ (x ,-_) $= +L-assoc xs ys zs ]
+    x ,- xs +L ys +L zs
+    QED
 
 -- TASK
 -- Formulate and prove that [] is a right identity for +L
-+L-right-id : ?
-+L-right-id = ?
++L-right-id : {!   !}
++L-right-id = {!   !}
+
+{-
 
 -- TASK
 -- Implement a function which returns the length of a list as a natural number
@@ -258,4 +275,4 @@ zip = {! !}
 -- Can you prove any properties linking the two?
 -- Are there some obvious properties for "the Nat version of zip" which you can transfer back to zip?
 -}
-  
+   
