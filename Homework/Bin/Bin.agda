@@ -5,7 +5,6 @@ module Homework.Bin.Bin where
 import Lib.Nat as Nat
 open Nat using (Nat; _+N_)
 open import Lib.Eq
-open import Lib.Sigma
 open import Lib.Zero
 open import Lib.One
 

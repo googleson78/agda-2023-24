@@ -101,7 +101,8 @@ to-from-id : (n : Nat) -> toNat (fromNat n) == n
 ```
 Ако не, дайте контрапример, т.е. имплементирайте
 ```agda
-to-from-counterexample : Nat >< \n -> toNat (fromNat n) == n -> Zero
+to-from-counterexample-num : Nat
+to-from-counterexample : toNat (fromNat to-from-counterexample-num) == to-from-counterexample-num -> Zero
 ```
 
 ## 05. `from-to-id`
@@ -114,7 +115,8 @@ from-to-id : (b : Bin) -> fromNat (toNat b) == b
 
 Ако не, дайте контрапример, т.е. имплементирайте
 ```agda
-from-to-counterexample : Bin >< \b -> fromNat (toNat b) == b -> Zero
+from-to-counterexample-num : Bin
+from-to-counterexample : fromNat (toNat from-to-counterexample-num) == from-to-counterexample-num -> Zero
 ```
 
 
