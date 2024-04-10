@@ -1,6 +1,6 @@
 {-# OPTIONS --no-unicode #-}
 
-module Lecture.FiveStart where
+module Lecture.FiveLive where
 
 open import Lib.Nat
 open import Lib.Zero
