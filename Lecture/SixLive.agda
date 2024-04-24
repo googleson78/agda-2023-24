@@ -101,6 +101,7 @@ module
     empty : LeqBound lo hi -> BST lo hi
     node : (x : Key) (l : BST lo (inKey x)) (r : BST (inKey x) hi) -> BST lo hi
 
+{-
   -- TASK
   -- We'll be implementing sorting of Lists by doing the following
   -- 1. We'll define a type of ordered lists (OList), similar to BST
@@ -118,31 +119,20 @@ module
   -- oconstraints that you think you'll need.
   insert :
     {lo hi : Bound} (k : Key) ->
-    {! !} ->
+    ? ->
     BST lo hi -> BST lo hi
-  insert = {! !}
+  insert = ?
 
   -- TASK
   -- Implement converting an ordinary list to a BST
   -- Note how the BST is unbounded, so that it's easier for us to implement this.
   listToBST : List Key -> BST -inf +inf
-  listToBST = {! !}
+  listToBST = ?
 
   -- TASK
   -- Use the same idea as in BST to define "ordered lists"
   -- Be careful about what oconstraints you need in your recursive case!
   data OList (lo hi : Bound) : Set where
-    onil : LeqBound lo hi -> OList lo hi
-    ocons :
-      (k : Key) ->
-      LeqBound lo (inKey k) ->
-      OList (inKey k) hi ->
-      OList lo hi
-
-  olap : {lo hi : Bound} (k : Key) -> OList lo (inKey k) -> OList (inKey k) hi -> OList lo hi
-  olap k (onil x) ys = ocons k x ys
-  olap k (ocons x p xs) ys = ocons x p (olap k xs ys)
-{-
 
   -- TASK
   -- You should be able to represent an ordered list as an OList
