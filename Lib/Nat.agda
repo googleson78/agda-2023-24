@@ -129,3 +129,10 @@ infixr 120 _*N_
   (m +N n *N m) *N k =[ *N-right-distrib-+N m (n *N m) k ]
   m *N k +N (n *N m) *N k =[ (m *N k +N_)  $= *N-assoc n m k ]
   suc n *N m *N k QED
+
+
+Lt : Nat -> Nat -> Set
+Lt zero zero = Zero
+Lt zero (suc m) = One
+Lt (suc n) zero = Zero
+Lt (suc n) (suc m) = Lt n m
