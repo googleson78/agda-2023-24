@@ -9,6 +9,9 @@ open import Lib.Sigma
 open import Lib.Dec
 open import Lib.List
 
+-- TODO FOR NEXT YEAR: give intuit for >< being a sum
+-- by showing how you can express _+_ with >< (and indeed any sum type)
+
 -- mention lib changes
 -- Lib.Nat
 -- Lib.List

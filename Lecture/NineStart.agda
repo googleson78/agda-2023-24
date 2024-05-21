@@ -181,6 +181,7 @@ rename = ?
 withContext : {tau : Type} (gamma : Context) -> Lam gamma tau -> Lam gamma tau
 withContext _ x = x
 
+-- TODO FOR NEXT YEAR: these synonyms really don't work because of Sigma and _[_], fix them somehow
 -- NOTE
 -- Convenience synonyms for small contexts
 pattern [_] x = [] -, x
