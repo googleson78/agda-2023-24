@@ -16,11 +16,15 @@ open import Lecture.NineLive
 -- TODO
 -- buggy _[_], delete it
 
+-- TODO FOR NEXT YEAR: maybe add some primitive values to our system
+-- so that we can evaluate beta reductions fully using them?
+-- or instead use a beta reduction that can see under lambdas?
 -- TODO definitions
+-- "term" - Lam ctx ty
 -- "closed term" - a term with no free variables
 -- "beta reduction" - evaluating an expression
 -- "beta redex" - a term we can reduce using beta reduction
--- "value", - functions, since we're in a pure lambda calculus. If we added e.g. chars/strings/nats to our language, those would be values as well
+-- "value" - TODO FOR NEXT YEAR: better motivation here, relate it to how we want beta reduction to work? functions, since we're in a pure lambda calculus. If we added e.g. chars/strings/nats to our language, those would be values as well
 
 {-
 -- TASK
@@ -98,6 +102,7 @@ _ : foo0 [0=> foo1 ] == foo2
 _ = refl
 
 -- TASK
+-- TODO FOR NEXT YEAR: better motivation here, relate it to how we want beta reduction to work? functions, since we're in a pure lambda calculus.
 -- We want Val to be a predicate stating that a certain term is a Value.
 --
 -- We're working in a "pure" lambda calculus, meaning we only have variables, application, and lambdas.
