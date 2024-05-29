@@ -12,6 +12,9 @@ open import Lib.Two
 open import Lib.Zero
 open import Lib.Sigma
 
+-- TODO FOR NEXT YEAR:
+-- This takes like 1.5hrs, even if we hurry a bit, so take a break in the middle
+
 -- TODO:
 -- discuss levels briefly
 -- example: list of types
