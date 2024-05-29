@@ -133,7 +133,7 @@ MAYBE = ?
 
 {-
 -- TASK
--- A category with one object
+-- A category with one object and one arrow
 -- *
 ONE : Category
 ONE = ?
