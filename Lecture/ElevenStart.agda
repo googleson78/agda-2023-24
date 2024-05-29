@@ -14,6 +14,8 @@ open import Lib.Sigma
 
 -- TODO FOR NEXT YEAR:
 -- This takes like 1.5hrs, even if we hurry a bit, so take a break in the middle
+-- TODO FOR NEXT YEAR:
+-- Actually maybe split this up, first talk about cats, and then about functors?
 
 -- TODO:
 -- discuss levels briefly
