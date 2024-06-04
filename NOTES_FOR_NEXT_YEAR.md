@@ -2,7 +2,7 @@ Some ideas:
 
 Cubical
 
-nbe?
+nbe? also present in https://cs.ioc.ee/ewscs/2014/mcbride/mcbride-deptypedmetaprog.pdf
 
 Codebruijn?
 
