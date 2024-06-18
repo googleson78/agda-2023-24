@@ -11,3 +11,5 @@ https://cs.ioc.ee/ewscs/2014/mcbride/mcbride-deptypedmetaprog.pdf
 https://github.com/pigworker/ProgrammerCommaCon/tree/master/CS410-19/Exercise (also maybe some tasks?)
 * just overall explore ProgrammerCommaCon more..
 
+
+FIX HEAP minimum SIGNATURE, you can implement it wrong right now
