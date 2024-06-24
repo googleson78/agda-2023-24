@@ -13,3 +13,5 @@ https://github.com/pigworker/ProgrammerCommaCon/tree/master/CS410-19/Exercise (a
 
 
 FIX HEAP minimum SIGNATURE, you can implement it wrong right now
+
+ctrl+shift+p, write Agda, see all commands
